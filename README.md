@@ -1,2 +1,0 @@
-# NodeJS
-Capacitación en NodeJS 
