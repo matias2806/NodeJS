@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %></title>
+    <%- include('./partials/head.html'); %>
+</head>
+<body>
+    
+    <%- include('./partials/navigation.html'); %>
+
+    <div class="container">
+        <header class="row">
+            <div class="col-lg12 text-center">
+                <img src="/img/quares.png" class="animate__animated animate__swing" alt="Imagen Quares" id=imagenQuares>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECTIONE ONE -->
+    <div class="container-fluid" id="about">
+        <div class="row bg-dark text-white p-5 text-center">
+            <div class="col-sm-6">
+                <img src="/img/Quares2.svg"  alt="Quares2" class="animate__animated animate__backInLeft">
+
+                
+
+            </div>
+            <div class="col-sm-6">
+                <h4>Capacitacion de NodeJS</h4>
+                <h6>QUA500-49511 Introducción a NodeJS</h6>
+            </div>
+        </div>
+    </div>
+
+    <%- include('./partials/footer.html'); %>
+</body>
+</html>

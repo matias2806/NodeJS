@@ -1,0 +1,22 @@
+
+nav{
+    font-family: 'Spicy Rice', cursive;
+}
+
+body{
+    background-color: #00DBDE;
+    background-image: linear-gradient(247deg, #00DBDE 0%, #FC00FF 100%);
+}
+
+#imagenQuares{
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: white;
+  }
