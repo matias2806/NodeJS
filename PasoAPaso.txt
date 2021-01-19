@@ -12,8 +12,6 @@ npm i express ejs morgan    ----> express es un freamework de NodeJs
                             ----> ejs motor de plantillas (Embedded JavaScript templating.) permite agregarle logica a los HTML. https://ejs.co/#docs
                             ----> morgan es un modulo para ver que es lo que los navegadores le estan pidiendo a nuestro servidor, sirve para ver los logs de las peticiones   https://www.npmjs.com/package/morgan  
 
-npm install -g now  ---->Para instalar now para hostear la pag
-
 node src/index.js ----> con esto corro un js
 
 npm run dev   -----> genere un script en el package.json y ahora para ejecutar voy a usar 
@@ -21,5 +19,6 @@ npm run dev   -----> genere un script en el package.json y ahora para ejecutar v
 npm i nodemon -D ----> En el package.json se instala en devDependencies es decir que es un paquete para desarrollo para facilitarme la vida
     Este paquete lo que hace es escucha los cambios de mis archivos (es como el live server)
 
+npm install -g now  ---->Para instalar now para hostear la pag
 
 
