@@ -1,6 +1,8 @@
 const express = require ('express');
+const morgan = require('morgan');
 const app = express();
 const path = require('path');
+const bodyParser = require('body-parser');
 
 //settings
 app.set('appName', 'Matias Palmieri NodeJS Quares');
@@ -12,9 +14,13 @@ app.set('view engine', 'ejs'); //esto es para aclarar que vas a trabajar con ejs
 
 //midlewares
 app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 //routes
 app.use(require('./routes/'));
+
+
 
 //static files
 app.use(express.static(path.join(__dirname, 'public')));

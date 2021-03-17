@@ -21,3 +21,7 @@ npm run dev   -----> genere un script en el package.json y ahora para ejecutar v
 
 npm install -g now  ---->Para instalar now para hostear la pag (No se uso)
 
+
+COMANDOS USADOS PARA INTEGRARLO A FIREBASE
+
+npm i firebase-admin ------> para integrarlo con firebase

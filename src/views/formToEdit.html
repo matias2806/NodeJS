@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><% title %></title>
+    <%- include('./partials/head.html'); %>
+</head>
+<body>
+    
+    <%- include('./partials/navigation.html'); %>
+
+
+ 
+    <div class="col-md-6 offset-md-3"style="padding-top:35px;">
+        <div class="card">
+            <div class="card-header">
+                <h3>Editar información de un contacto existente</h3>
+            </div>
+            <div class="card-body">
+                <form action="/editContact" method="POST">
+                    <div class="form-group formControl">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Ingrese su email" autofocus value="<%= email %>"> 
+                    </div>
+                    <div class="form-group formControl">
+                        <label for="mensaje">Mensaje</label>
+                        <input type="text" class="form-control" name="mensaje" id="mensaje" placeholder="Ingrese su mensaje" value="<%= mensaje %>"> 
+                    </div>
+                    <div class="form-group formControl">
+                        <label for="calificacion">Calificacion</label>
+                        <input type="text" class="form-control" name="calificacion" id="calificacion" placeholder="Ingrese su calificacion" value="<%= calificacion %>"> 
+                    </div>
+                    <div class="form-group formControl">
+                        <label for="edad">Edad</label>
+                        <input type="text" class="form-control" name="edad" id="edad" placeholder="Ingrese su edad" value="<%= edad %>"> 
+                    </div>
+                    <div class="form-group formControl">
+                        <label for="id" style="display: none;">id</label>
+                        <input type="text" class="form-control" name="id" id="id" placeholder="Ingrese su id" value="<%= id %>" readonly style="display: none;"> 
+                    </div>
+                    <button class="btn btn-primary btn-block">
+                        Guardar cambios
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div class="container">
+        <div class="card-footer">
+            
+        </div>
+    </div>
+  <%- include('./partials/footer.html'); %>
+</body>
+</html>

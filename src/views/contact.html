@@ -10,30 +10,67 @@
 
     <%- include('./partials/navigation.html'); %>
 
-    <h3>Contact page</h3>
+  
+    <div class="col-md-6 offset-md-3"style="padding-top:35px;">
+        <div class="card">
+            <div class="card-header">
+                <h1>Contactos</h1>
+            </div>
+            <div class="card-body">
 
-    <div class="container p-5" >
-        <div class="row" >
-            <div class="col-md-4 offset-md-4">
-                <div class="card-header bg-dark text-white text-center">
-                    <h3>Contact me</h3>
-                </div>
-                <div class="card-body">
-                    <form action="">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="ingrese su email">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" name="" id="" cols="30" rows="10" placeholder="ingrese su mensaje"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-primary btn-block" id="btnEnviaMensaje">Send Message</button>
-                        </div>
-                    </form>
-                </div>
+                <% if(contactos){ %>
+                    <ul class="list-group">
+                        <%for(var codigo in contactos){ %>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div class="container">
+                                <!-- <%= codigo %> /  -->
+                                <%= contactos[codigo].email %> /
+                                <%= contactos[codigo].mensaje %> /
+                                <%= contactos[codigo].calificacion %> /
+                                <%= contactos[codigo].edad %>
+                                </div>
+                                <div class="container" style="text-align : end;"> 
+                                    <!-- <a href="/editContact/<%= codigo  %>/<%= 'asd'  %>" class="btn btn-warning">Editar</a> -->
+                                    <!-- <a href="/editContact/<%= codigo  %>" class="btn btn-warning">Editar</a> -->
+                                    <a href="/formToEdit/<%= codigo %>/<%= contactos[codigo].email%>/<%= contactos[codigo].mensaje%>/<%= contactos[codigo].calificacion%>/<%= contactos[codigo].edad%>
+                                        
+                                       " class="btn btn-warning">Editar</a>
+                                    <a href="/deleteContact/<%= codigo %>" class="btn btn-danger">Eliminar</a>
+                                </div>
+                            </li>
+                        <% } %>
+                    </ul>
+                  <% } else{ %>  
+                    <h4>Sin contactos</h4>
+                 <% } %>
+               
+
+
+               
+            </div>
+            <div class="card-footer" >
+                <form action="/new-contact" method="POST">
+                    <h4 style="margin-top: 8px; ">Crear un nuevo contacto.</h4>
+                    <div class="form-group formControl">
+                        <input type="text" class="form-control" name="email" id="email" placeholder="Ingrese su email" autofocus> 
+                    </div>
+                    <div class="form-group formControl">
+                        <input type="text" class="form-control" name="mensaje" id="mensaje" placeholder="Ingrese su mensaje"> 
+                    </div>
+                    <div class="form-group formControl">
+                        <input type="text" class="form-control" name="calificacion" id="calificacion" placeholder="Ingrese su calificacion"> 
+                    </div>
+                    <div class="form-group formControl">
+                        <input type="text" class="form-control" name="edad" id="edad" placeholder="Ingrese su edad"> 
+                    </div>
+                    <button class="btn btn-primary btn-block">
+                        Agregar
+                    </button>
+                </form>
             </div>
         </div>
     </div>
+
 
     <%- include('./partials/footer.html'); %>
 </body>
